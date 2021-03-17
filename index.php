@@ -83,7 +83,7 @@ include("includes/header.php"); ?>
                     <td>
                     <a href="edit.php?id=<?php echo $dato["country_id"] ?>" class="btn btn-secondary" > <i class="fas fa-marker  fa-lg" ></i>
                     </a>
-                    <a href="delete.php?id=<?php echo  $dato["country_id"]?>" id="btnDeleteCountry" idCountry="<?php echo  $dato["country_id"]?>" class="btn btn-danger" > <i class="far fa-trash-alt  fa-lg"></i> </a>
+                    <a href="delete.php?id=<?php echo  $dato["country_id"]?>" id="btnDeleteCountry" idCountry="<?php echo  $dato["country_id"]?>" class="btn btn-danger" onclick="return confirmDelete()" > <i class="far fa-trash-alt  fa-lg"></i> </a>
                     </td>
                 </tr>
 

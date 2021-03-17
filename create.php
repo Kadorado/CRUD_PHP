@@ -34,7 +34,7 @@ if (isset($_POST["country_new"])) {
 
     $flag= false;
 
-    echo $country_name;
+ 
     foreach($result_country as $dato):
         if ($country_name==$dato["country_name"]){
             $flag=true;
@@ -42,9 +42,9 @@ if (isset($_POST["country_new"])) {
         endforeach;
 
     if($flag){
-        $index = "index.php";
-        header('Location:'. $index);
-        // message alert
+        echo "<script> alert('Este pais ya lo agregaste');
+        window.location='/TORNEO';
+        </script>";
     }
 
     else{

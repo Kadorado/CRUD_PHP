@@ -16,7 +16,7 @@ if (isset($_POST["country"])) {
 
     $result_country = $stmt ->fetchAll();
 
-    echo $country_name;
+
 
     $flag= false;
     foreach($result_country as $dato):
@@ -26,8 +26,9 @@ if (isset($_POST["country"])) {
         endforeach;
 
     if($flag){
-        $index = "index.php";
-        header('Location:'. $index);
+        echo "<script> alert('ya has agregado este país');
+        window.location='/TORNEO';
+        </script>";
     }
 
     else{
