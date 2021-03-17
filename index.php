@@ -10,7 +10,7 @@ include("includes/header.php"); ?>
                 <h6>Agregar país</h6>
 
 
-                <form action="create_2.php" method="POST">
+                <form action="add.php" method="POST">
                     <select class="form-control" data-show-subtext="true" data-live-search="true" name="country">
                     <?php
                         $stmt = Conexion::conectar()->prepare("SELECT * FROM soccer_country WHERE able=1 OR able=0");
@@ -29,7 +29,7 @@ include("includes/header.php"); ?>
 
             </div>
 
-            <div class="card card-body">
+            <div class="card card-body mt-4">
             <form action="create.php" method="POST" >
                 <h6>Agregar un nuevo Pais</h6>
                 <div class="form-group">

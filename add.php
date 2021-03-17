@@ -14,12 +14,22 @@ if (isset($_POST["country"])) {
 
     $stmt -> execute();
 
-    $result_country = $stmt ->fetch();
+    $result_country = $stmt ->fetchAll();
 
+    echo $country_name;
 
-    if(in_array($country_name, $result_country)){
-        echo "<script> alert('existe')</script>";
+    $flag= false;
+    foreach($result_country as $dato):
+        if ($country_name==$dato["country_name"]){
+            $flag=true;
+        }
+        endforeach;
+
+    if($flag){
+        $index = "index.php";
+        header('Location:'. $index);
     }
+
     else{
         $stmt = Conexion::conectar()->prepare("UPDATE soccer_country SET able =0 WHERE country_name = '$country_name'");
         $stmt -> execute();

@@ -7,8 +7,6 @@ const  btnDeleteCountry = ()=>{
 
 Swal.fire('Any fool can use a computer')
 
-console.log("estoy entrando")
-
 }
 
 
