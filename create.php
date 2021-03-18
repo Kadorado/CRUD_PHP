@@ -42,9 +42,16 @@ if (isset($_POST["country_new"])) {
         endforeach;
 
     if($flag){
-        echo "<script> alert('Este pais ya lo agregaste');
-        window.location='/TORNEO';
-        </script>";
+        ?>
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>;
+
+        <script> swal("Ya has agregado este país").then(
+            function(){
+                window.location='/TORNEO'
+            }
+
+        ) </script>;
+        <?php
     }
 
     else{
